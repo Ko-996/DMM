@@ -248,14 +248,15 @@ export default function NuevoProyectoPage() {
                         <SelectValue placeholder="Seleccione el tipo de proyecto" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="capacitacion">Capacitación</SelectItem>
-                        <SelectItem value="viveres">Víveres</SelectItem>
-                        <SelectItem value="huertos">Huertos</SelectItem>
-                        <SelectItem value="microcreditos">Microcréditos</SelectItem>
-                        <SelectItem value="salud">Salud</SelectItem>
-                        <SelectItem value="educacion">Educación</SelectItem>
-                        <SelectItem value="infraestructura">Infraestructura</SelectItem>
-                        <SelectItem value="otro">Otro</SelectItem>
+                        <SelectItem value="Animales de producción">Animales de producción</SelectItem>
+                        <SelectItem value="Ayuda social">Ayuda social</SelectItem>
+                        <SelectItem value="Huertos">Huertos</SelectItem>
+                        <SelectItem value="Invernaderos">Invernaderos</SelectItem>
+                        <SelectItem value="Jornadas medicas">Jornadas medicas</SelectItem>
+                        <SelectItem value="Micro granjas">Micro granjas</SelectItem>
+                        <SelectItem value="Semillas y pilones">Semillas y pilones</SelectItem>
+                        <SelectItem value="Víveres">Víveres</SelectItem>
+                        <SelectItem value="Otro">Otro</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>

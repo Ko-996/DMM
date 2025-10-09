@@ -411,13 +411,16 @@ export default function EditarCapacitacionPage() {
                         <SelectValue placeholder="Seleccione el tipo de capacitación" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="Liderazgo">Liderazgo</SelectItem>
-                        <SelectItem value="Emprendimiento">Emprendimiento</SelectItem>
-                        <SelectItem value="Derechos Humanos">Derechos Humanos</SelectItem>
-                        <SelectItem value="Educación Financiera">Educación Financiera</SelectItem>
-                        <SelectItem value="Capacitación Técnica">Capacitación Técnica</SelectItem>
+                        <SelectItem value="Cocina Guatemalteca">Cocina Guatemalteca</SelectItem>
+                        <SelectItem value="Corte y confección">Corte y confección</SelectItem>
+                        <SelectItem value="Derechos y Oblicaciones">Derechos y Oblicaciones</SelectItem>
                         <SelectItem value="Desarrollo Personal">Desarrollo Personal</SelectItem>
-                        <SelectItem value="Cocina">Cocina</SelectItem>
+                        <SelectItem value="Educación Financiera">Educación Financiera</SelectItem>
+                        <SelectItem value="Emprendimiento">Emprendimiento</SelectItem>
+                        <SelectItem value="Intecap">Intecap</SelectItem>
+                        <SelectItem value="Liderazgo">Liderazgo</SelectItem>
+                        <SelectItem value="Panadería">Panadería</SelectItem>
+                        <SelectItem value="Peluquería">Peluquería</SelectItem>
                         <SelectItem value="Otro">Otro</SelectItem>
                       </SelectContent>
                     </Select>
