@@ -46,9 +46,10 @@ export default function LoginPage() {
       setIsLoading(false)
     }
   }
-
+//<div className="min-h-screen flex items-center justify-center p-4">
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex flex-col">
+      <div className="flex-1 flex items-center justify-center p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           {/*<div className="mx-auto mb-4 w-12 h-12 bg-black rounded-full flex items-center justify-center">
@@ -120,6 +121,22 @@ export default function LoginPage() {
           </div>
         </CardContent>
       </Card>
+    </div>
+    
+    <footer className="bg-gray-900 text-white py-4 mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p>&copy; 2025 Dirección Municipal de la Mujer de Salcajá. Todos los derechos reservados.</p>
+          <p>Desarrollado por: Kevin Rafael Ovalle Lemus.</p>
+          <div className="flex items-center justify-center mt-2 space-x-2">
+            <img
+              src="/images/logoUMG.jpg"
+              alt="Logo Dirección Municipal de Mujeres de Salcajá"
+              className="h-8 w-8 rounded-full object-cover shadow-lg"
+            />
+            <span >UMG</span>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

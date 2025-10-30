@@ -108,6 +108,10 @@ export default function NuevoProyectoPage() {
     e.preventDefault()
     setIsLoading(true)
 
+    const loadingToast = toast.loading("Creando proyecto...", {
+          description: "Por favor espere mientras se crea el proyecto",
+        })
+
     try {
       // Preparar datos del proyecto
       const proyectoData = {
@@ -162,6 +166,8 @@ export default function NuevoProyectoPage() {
             //console.error('❌ Error al asignar sectores')
           }
         }
+
+        toast.dismiss(loadingToast)
         
         toast.success("Proyecto creado exitosamente", {
           description: `${formData.nombre} ha sido creado con ${beneficiariasAsignadas} beneficiarias y ${sectoresAsignados} sectores`,
@@ -172,9 +178,10 @@ export default function NuevoProyectoPage() {
         // Redirigir después de un momento
         setTimeout(() => {
           router.push("/proyectos")
-        }, 1500)
+        }, 1000)
       } else {
         console.error('Error en la creación del proyecto:', result)
+        toast.dismiss(loadingToast)
         toast.error("Error al crear proyecto", {
           description: result.message || "No se pudo crear el proyecto",
           duration: 4000,
@@ -182,6 +189,7 @@ export default function NuevoProyectoPage() {
       }
     } catch (error) {
       console.error('Error creating proyecto:', error)
+      toast.dismiss(loadingToast)
       toast.error("Error al crear proyecto", {
         description: "Hubo un problema al crear el proyecto",
         duration: 4000,
@@ -723,7 +731,7 @@ export default function NuevoProyectoPage() {
       <footer className="bg-gray-800 text-white py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; 2025 Dirección Municipal de la Mujer de Salcajá. Todos los derechos reservados.</p>
-    
+          <p>Desarrollado por: Kevin Rafael Ovalle Lemus.</p>
           <div className="flex items-center justify-center mt-2 space-x-2">
             <img
               src="/images/logoUMG.jpg"

@@ -23,7 +23,7 @@ app.use(helmet())
 // Rate limiting 
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
-  max: 300, // limit each IP to 200 requests per minute
+  max: 300, // limit each IP 
   message: {
     success: false,
     message: "Demasiadas solicitudes, intenta de nuevo en un momento"
@@ -36,13 +36,13 @@ app.use(limiter)
 // CORS configuration
 const corsOptions = {
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
+    // Allow requests with no origin 
     if (!origin) return callback(null, true)
     
     const allowedOrigins = [
-      process.env.FRONTEND_URL || "http://localhost:3000",
-      "http://localhost:3000",
-      "http://127.0.0.1:3000"
+      process.env.FRONTEND_URL || process.env.FRONTEND_URL2 || "http://localhost:3000",
+      //"http://localhost:3000",
+      //"http://127.0.0.1:3000"
     ]
     
     if (allowedOrigins.includes(origin)) {
@@ -82,10 +82,6 @@ app.use((req, res, next) => {
 
 // CORS debugging middleware
 app.use((req, res, next) => {
-  //console.log(`🌐 CORS Debug - ${req.method} ${req.path}`)
-  //console.log(`📍 Origin: ${req.headers.origin}`)
-  //console.log(`🍪 Cookies: ${req.headers.cookie ? 'Present' : 'Missing'}`)
-  //onsole.log(`🔑 Auth: ${req.headers.authorization ? 'Present' : 'Missing'}`)
   next()
 })
 

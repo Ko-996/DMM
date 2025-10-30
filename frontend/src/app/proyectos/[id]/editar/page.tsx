@@ -901,7 +901,7 @@ export default function EditarProyectoPage() {
         <footer className="bg-gray-800 text-white py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; 2025 Dirección Municipal de la Mujer de Salcajá. Todos los derechos reservados.</p>
-    
+          <p>Desarrollado por: Kevin Rafael Ovalle Lemus.</p>
           <div className="flex items-center justify-center mt-2 space-x-2">
             <img
               src="/images/logoUMG.jpg"

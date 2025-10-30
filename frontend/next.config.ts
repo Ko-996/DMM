@@ -8,17 +8,17 @@ const nextConfig: NextConfig = {
   },
   
   env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api',
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api',
   },
   // Enable API routes if needed
-  async rewrites() {
+  /*async rewrites() {
     return [
       {
         source: '/api/:path*',
         destination: `${process.env.NEXT_PUBLIC_API_URL}/:path*`,
       },
     ];
-  },
+  },*/
 };
 
 export default nextConfig;
