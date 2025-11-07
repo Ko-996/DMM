@@ -133,7 +133,7 @@ export default function LoginPage() {
               alt="Logo Dirección Municipal de Mujeres de Salcajá"
               className="h-8 w-8 rounded-full object-cover shadow-lg"
             />
-            <span >UMG</span>
+            <span >UMG Versión 1.0.</span>
           </div>
         </div>
       </footer>

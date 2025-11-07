@@ -181,7 +181,7 @@ export function useBeneficiarias() {
       
       if (response.success) {
         toast.success('Beneficiaria eliminada exitosamente')
-        await fetchBeneficiarias() // Refresh the list
+        await fetchBeneficiarias() 
         return true
       } else {
         toast.error(response.message || 'Error al eliminar beneficiaria')
